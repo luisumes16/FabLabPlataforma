@@ -46,8 +46,27 @@ function onlyMaterial() {
    //MDF
    //var precioplancha = 165
    //MADERA 1.2 por 2.4
-    var precioplancha = 600
+    var precioplancha = 0
     //
+
+    var selectMaterial= document.getElementById('selectMaterial').value
+    if(selectMaterial == 0){
+        alert('Complete los campos')
+    }else if(selectMaterial == 1){
+        //MDF 3mm
+        var precioplancha = 120
+    }else if(selectMaterial == 2){
+        //MDF 6mm
+        var precioplancha = 175
+    }
+    else if(selectMaterial == 3){
+        //Acrilico transparente
+        var precioplancha = 450
+    }else if(selectMaterial == 1){
+        //Acrilico negro
+        var precioplancha = 170
+    }
+
     var divisiones = 5
     var pdiv = precioplancha/divisiones
     var cm21 = 90*60  
@@ -60,8 +79,8 @@ function onlyMaterial() {
     var lcm = document.getElementById('lcm')
     var cm = ancho * largo;
     lcm.textContent = "Cm2: " + cm + "cm."
-    var preciocm = 0.0208383    
-    //var preciocm = pdiv/cm21
+    //var preciocm = 0.0208383    
+    var preciocm = pdiv/cm21
     console.log(preciocm)
     var preciou = preciocm * cm
     lpreciou.textContent = "Precio: Q." + preciou.toFixed(2)
@@ -98,5 +117,6 @@ function ganancia() {
     }
     
 }
+
 
 
