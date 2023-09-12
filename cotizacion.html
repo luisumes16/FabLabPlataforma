@@ -6,47 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma fab lab</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
 <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid ">
-            <a class="navbar-brand" href="#">FabLab</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ">
-                    <li class="nav-item ">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="proveedores.html">Proveedores</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pedidos.html">Pedidos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="resepcion.html">recepcion</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="blanco.png" width="44" height="30">
+          </a>
         </div>
-    </nav>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="pedidos.html">Pedidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="proveedores.html">Proveedores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="recepcion.html">Recepción</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="cotizacion.html">Cotización</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
     <!--Cuerpo de la pgina / Pedidos-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -83,22 +80,15 @@
         <p id="lpreciou">Precio: Q.</p>
         <p id="lcm">Cm2: </p>
 
-     
-        <div style="justify-content: center; align-items: center;">
-              
-            <input type="radio" name="familia" id="checktienda1" style="width: 1.5em; padding-top: 2em; margin-top: 1em;" value="productosTienda1">
-            <label for="checktienda1" style="padding-bottom: 1em;">Cafetería Doña Romelía </label>
-            
-            
-            
-          </div>
-          <div style="justify-content: center; align-items: center;">
-            
-            
-            <input type="radio" name="familia" id="checktienda2" style="width: 1.5em;" value="productosTienda2">
-            <label for="checktienda2">The Brother's Cafe</label>
-            
-          </div>
+        <div>
+            <select class="form-select" aria-label="Seleccione el tipo de cotización" id="selectCalculo">
+                <option selected>Seleccione un tipo de cálculo</option>
+                <option value="1">Sólo material</option>
+                <option value="2">Material y láser</option>
+                
+              </select>
+        </div>
+
         <div>
             <div class="mb-6">
                 <label for="exampleInputEmail1" class="form-label">Ancho</label>
@@ -117,24 +107,18 @@
         </div>
 
         <div id="divp2">
+            <h2>Tiempo de láser</h2>
             <div class="mb-6">
-                <label for="exampleInputEmail1" class="form-label">Ancho</label>
-                <input type="email" class="form-control" id="inputancho" aria-describedby="emailHelp">
+                <label for="exampleInputEmail1" class="form-label">Tiempo</label>
+                <input type="email" class="form-control" id="inputtiempo" aria-describedby="emailHelp">
 
             </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Largo</label>
-                <input type="email" class="form-control" id="inputlargo" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Cantidad</label>
-                <input type="email" class="form-control" id="inputcantidad" aria-describedby="emailHelp">
-            </div>
+          
            
         </div>
         <div>
-            <button id="btncalcular" class="btn btn-primary">Submit</button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+            <button id="btncalcular" class="btn btn-dark">Submit</button>
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
         </div>
 
 
@@ -144,6 +128,13 @@
 
 
     </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="cotizacion.js"></script>
+</body>
+
+</html>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
