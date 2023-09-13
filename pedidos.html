@@ -8,9 +8,9 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
+    <div class="container-center">
       <a class="navbar-brand" href="#">
-        <img src="blanco.png" width="44" height="30">
+        <img src="blanco.png" width="75" height="40">
       </a>
     </div>
     <div class="container-fluid">
@@ -36,17 +36,17 @@
     <div class="container">
       <h1>Registro de pedidos.</h1>
         <div class="mb-3">
-            <label class="form-label">Nombre del cliente</label>
+            <label class="form-label"><h4>Nombre del cliente</h4></label>
             <input type="text" class="form-control" id="inputNombre" aria-describedby="emailHelp">
           </div>
 
           <div class="mb-3">
-            <label class="form-label">Telefono</label>
+            <label class="form-label"><h4>Telefono</h4></label>
             <input type="text" class="form-control" id="inputTelefono" aria-describedby="emailHelp">
           </div>
 
           <div class="mb-3">
-            <label class="form-label">Descripción del producto</label>
+            <label class="form-label"><h4>Descripción del producto</h4></label>
             <div class="form-text">
               Una breve dscripción de como desea su producto final.
             </div>
@@ -54,13 +54,17 @@
           </div>
 
           <div class="mb-3">
-            <label class="form-label">medidas</label>
-            <input type="text" class="form-control" id="inputMedidas" aria-describedby="emailHelp">
+            <label class="form-label"><h4>Medidas</h4></label>
+            <br>
+            <label class="form-label">Ancho</label>
+            <input type="text" class="form-control" id="inputAncho" aria-describedby="emailHelp">
+            <label class="form-label">Largo</label>
+            <input type="text" class="form-control" id="inputLargo" aria-describedby="emailHelp">
           </div>
 
 
           <div class="mb-3">
-            <label class="form-label">Cantidad de productos</label>
+            <label class="form-label"><h4>Cantidad de productos</h4></label>
             <input type="text" class="form-control" id="inputCantidad">
             </div>
         <select class="form-select" aria-label="Default select example" id="inputMaterial">
@@ -83,11 +87,11 @@
 
             <br>
           <div>
-            <a type="submit" class="btn btn-primary" id="btnEnviar">Enviar</a>
+            <a type="submit" class="btn btn-dark" id="btnEnviar">Enviar</a>
       
-          <a class="btn btn-info" id="btnBorrar">Borrar</a>
+          <a class="btn btn-dark" id="btnBorrar">Borrar</a>
         
-          <a type="submit" class="btn btn-success" id="btnCancelar">cancelar</a>
+          <a type="submit" class="btn btn-dark" id="btnCancelar">cancelar</a>
         </div>
 
     </div>
