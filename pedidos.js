@@ -50,12 +50,13 @@ async function nuevoPedido(){
     var nombre1=document.getElementById("inputNombre").value
     var telefono=document.getElementById("inputTelefono").value
     var descripcion=document.getElementById("inputDescripción").value
-    var medidas=document.getElementById("inputMedidas").value
+    var ancho=document.getElementById("inputAncho").value
+    var largo=document.getElementById("inputLargo").value
     var cantidad=document.getElementById("inputCantidad").value
     var material=document.getElementById("inputMaterial").value
     var proyecto=document.getElementById("selectProyecto").value
     
-    if (nombre1==" "|| telefono==" "||descripcion==" "||medidas==""||cantidad==""|| material=="0"||proyecto=="0")
+    if (nombre1==" "|| telefono==" "||descripcion==" "||ancho==" "||largo==" "||cantidad==""|| material=="0"||proyecto=="0")
     {
         console.log("COMPLETE EL FORMULARIO")
     }
@@ -66,7 +67,8 @@ async function nuevoPedido(){
               nnombre: nombre1,
               telefo:telefono,
               descripcion: descripcion,
-              medidas:medidas,
+              Ancho:ancho,
+              Largo:largo,
               cantidad: cantidad,
               material: material,
               proyec:proyecto,
